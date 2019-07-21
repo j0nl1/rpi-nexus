@@ -20,9 +20,9 @@ RUN  curl -O ${NEXUS_DOWNLOAD_URL} \
 
 COPY ./config/nexus.vmoptions ${NEXUS_HOME}/bin/nexus.vmoptions
 
-EXPOSE 8081 8082 8083
+EXPOSE 8081-8083
 
-VOLUME ${NEXUS_HOME}/data
+VOLUME ${SONATYPE_DIR}/sonatype-work
 
 WORKDIR ${NEXUS_HOME}/bin
 
